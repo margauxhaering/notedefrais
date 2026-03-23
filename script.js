@@ -92,13 +92,13 @@ document.querySelectorAll('.stat-card').forEach((card, cardIndex) => {
 
         tr.innerHTML = `
             <td><input type="text"></td>
-            <td><input type="text"></td>
+            <td><input type="date"></td>
             <td><input type="text"></td>
             <td><input type="text"></td>
             <td><input type="number" class="price" step="0.01"></td>
             <td>
-                <label><input type="radio" name="card${cardIndex}-row${rowCount}"> A</label>
-                <label><input type="radio" name="card${cardIndex}-row${rowCount}"> B</label>
+                <label><input type="radio" name="card${cardIndex}-row${rowCount}"> CB</label>
+                <label><input type="radio" name="card${cardIndex}-row${rowCount}"> Espèce</label>
             </td>
         `;
 
