@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note de frais</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="mobile-menu-overlay"></div>
+    <div class="mobile-menu">
+        <div class="mobile-menu-header">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                </div>
+                Nom labo
+            </a>
+            <button class="mobile-menu-close" onclick="closeMobileMenu()">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"/>
+                    <line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+            </button>
+        </div>
+        <nav class="mobile-menu-nav">
+            <a href="index.html" class="active">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="3" width="7" height="7" rx="1"/>
+                    <rect x="14" y="3" width="7" height="7" rx="1"/>
+                    <rect x="3" y="14" width="7" height="7" rx="1"/>
+                    <rect x="14" y="14" width="7" height="7" rx="1"/>
+                </svg>
+                Note de frais
+            </a>
+
+        </div>
+    </div>
+
+    <div class="app-container">
+        <nav class="top-nav">
+            <div class="nav-container">
+                <div class="nav-left">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            </svg>
+                        </div>
+                        Nom labo
+                    </a>
+                    <div class="nav-menu">
+                        <div class="nav-item">
+                            <a href="index.html" class="nav-link active">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="3" width="7" height="7" rx="1"/>
+                                    <rect x="14" y="3" width="7" height="7" rx="1"/>
+                                    <rect x="3" y="14" width="7" height="7" rx="1"/>
+                                    <rect x="14" y="14" width="7" height="7" rx="1"/>
+                                </svg>
+                                Note de frais
+                            </a>
+                        </div>
+
+                </div>
+            </div>
+        </nav>
+        <main class="main-content">
+            <div class="page-header">
+                <h1 class="greeting" id="greeting">Génération de note de frais</h1>
+                <p class="greeting-sub">Remplir et selectionner ses besoins puis telecharger le fichier</p>
+            </div>
+
+            <div class="one-col">
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <h3 class="card-title">Informations</h3>
+                        </div>
+                    </div>
+                    <div class="card-scroll">
+                        <div class="card-scroll-inner" style="min-width: 360px;">
+                            <div class="activity-feed">
+                        <div class="activity-item">
+                            <div class="activity-icon blue">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                    <polyline points="14 2 14 8 20 8"/>
+                                    <line x1="16" y1="13" x2="8" y2="13"/>
+                                    <line x1="16" y1="17" x2="8" y2="17"/>
+                                </svg>
+                            </div>
+                            <div class="activity-content">
+                                <textarea rows="3" cols="50" class="activity-text" placeholder="NOM Prénom"></textarea>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon green">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                    <polyline points="22 4 12 14.01 9 11.01"/>
+                                </svg>
+                            </div>
+                            <div class="activity-content">
+                                <textarea rows="3" cols="50" class="activity-text" placeholder="Département"></textarea>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon orange">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                                </svg>
+                            </div>
+                            <div class="activity-content">
+                              <textarea rows="3" cols="50" class="activity-text" placeholder="Mission"></textarea>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon blue">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="8.5" cy="7" r="4"/>
+                                    <line x1="20" y1="8" x2="20" y2="14"/>
+                                    <line x1="23" y1="11" x2="17" y2="11"/>
+                                </svg>
+                            </div>
+                            <div class="activity-content">
+                              <textarea rows="3" cols="50" class="activity-text" placeholder="Imputation de la dépense (précisez si don)"></textarea>
+                            </div>
+                        </div>
+
+                    </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stats-grid">
+              <div class="stat-card">
+                  <div class="stat-label">A - Hébergement</div>
+
+                  <table class="stat-table">
+                      <thead>
+                          <tr class="header-row">
+                              <th>N*</th>
+                              <th>Date</th>
+                              <th>Description</th>
+                              <th>Montant et sa devise</th>
+                              <th>Prix €</th>
+                              <th>Payé en </th>
+                          </tr>
+                      </thead>
+
+                      <tbody>
+                          <tr>
+                              <td><input type="text"></td>
+                              <td><input type="date"></td>
+                              <td><input type="text"></td>
+                              <td><input type="text"></td>
+
+                              <td><input type="number" class="price"></td>
+
+                              <td>
+                                  <label><input type="radio" > CB</label>
+                                  <label><input type="radio" > Espece</label>
+                              </td>
+                          </tr>
+                      </tbody>
+                  </table>
+
+                  <button class="add-row">+ Ajouter une ligne</button>
+
+
+                  <div class="stat-value">0 €</div>
+              </div>
+              <div class="stat-card">
+                  <div class="stat-label">B - Transports</div>
+
+                  <table class="stat-table">
+                      <thead>
+                          <tr class="header-row">
+                              <th>N*</th>
+                              <th>Date</th>
+                              <th>Description</th>
+                              <th>Montant et sa devise</th>
+                              <th>Prix €</th>
+                              <th>Payé en </th>
+                          </tr>
+                      </thead>
+
+                      <tbody>
+                          <tr>
+                              <td><input type="text"></td>
+                              <td><input type="date"></td>
+                              <td><input type="text"></td>
+                              <td><input type="text"></td>
+
+                              <td><input type="number" class="price"></td>
+
+                              <td>
+                                  <label><input type="radio" > CB</label>
+                                  <label><input type="radio" > Espece</label>
+                              </td>
+                          </tr>
+                      </tbody>
+                  </table>
+
+                  <button class="add-row">+ Ajouter une ligne</button>
+
+
+                  <div class="stat-value">0 €</div>
+              </div>
+              <div class="stat-card">
+                  <div class="stat-label">C - Restaurations</div>
+
+                  <table class="stat-table">
+                      <thead>
+                          <tr class="header-row">
+                              <th>N*</th>
+                              <th>Date</th>
+                              <th>Description</th>
+                              <th>Montant et sa devise</th>
+                              <th>Prix €</th>
+                              <th>Payé en </th>
+                          </tr>
+                      </thead>
+
+                      <tbody>
+                          <tr>
+                              <td><input type="text"></td>
+                              <td><input type="date"></td>
+                              <td><input type="text"></td>
+                              <td><input type="text"></td>
+
+                              <td><input type="number" class="price"></td>
+
+                              <td>
+                                  <label><input type="radio" > CB</label>
+                                  <label><input type="radio" > Espece</label>
+                              </td>
+                          </tr>
+                      </tbody>
+                  </table>
+
+                  <button class="add-row">+ Ajouter une ligne</button>
+
+
+                  <div class="stat-value">0 €</div>
+              </div>
+              <div class="stat-card">
+                  <div class="stat-label">D - Divers</div>
+
+                  <table class="stat-table">
+                      <thead>
+                          <tr class="header-row">
+                              <th>N*</th>
+                              <th>Date</th>
+                              <th>Description</th>
+                              <th>Montant et sa devise</th>
+                              <th>Prix €</th>
+                              <th>Payé en </th>
+                          </tr>
+                      </thead>
+
+                      <tbody>
+                          <tr>
+                              <td><input type="text"></td>
+                              <td><input type="date"></td>
+                              <td><input type="text"></td>
+                              <td><input type="text"></td>
+
+                              <td><input type="number" class="price"></td>
+
+                              <td>
+                                  <label><input type="radio" > CB</label>
+                                  <label><input type="radio" > Espece</label>
+                              </td>
+                          </tr>
+                      </tbody>
+                  </table>
+
+                  <button class="add-row">+ Ajouter une ligne</button>
+
+
+                  <div class="stat-value">0 €</div>
+              </div>
+            </div>
+
+            <div class="one-col" style="margin-top: 1.5rem;">
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <h3 class="card-title">Total général des dépenses : </h3>
+                            <div class="stat-value-total">0 €</div>
+                        </div>
+
+                    </div>
+                    <div>
+                      <h3 class="card-title">AVANCE (à deduire) en date du :</h3>
+                      <input type="number" id="custom-value" style="width:10%; padding:6px; font-size:14px;">
+                      <input type="date" id='custom-date' style="width:20%; padding-left:30px; font-size:14px;"></input>
+                    </div>
+                    <div class="chart-container">
+                    </div>
+                </div></div>
+
+            <div class="two-col" style="margin-top: 1.5rem;">
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <h3 class="card-title">Date et signature du demandeur</h3>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <h3 class="card-title">Date et signature du chef d'equipe</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="margin-top:20px; text-align:center;">
+    <button id="downloadPdf">📄 Télécharger PDF</button>
+</div>
+        </main>
+
+        <footer class="footer">
+            <p>@ 2026 - Margaux Haering</p>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.31/jspdf.plugin.autotable.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
